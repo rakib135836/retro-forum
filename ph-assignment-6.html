@@ -1,11 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ASSIGNMENT 6</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- tailwind and daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'btn-color': '#7A7DFC',
+                        'h-color': '#12132D',
+                        'p-color': '#12132D99',
+                        'blue-bg': '#12132D',
+                        'gray-bg': '#12132D',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .h2 {
+            font-family: Mulish;
+            font-size: 36px;
+            font-weight: 900;
+        }
+
+        .h3 {
+            font-family: Mulish;
+            font-size: 40px;
+            font-weight: 900;
+        }
+
+        .h4 {
+            font-family: Mulish;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .p {
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    </style>
+
 </head>
-<body>
-    
+
+<body class="p-0 lg:px-36 lg:py-5 px-2">
+
+
+
+    <div class="lg:container-lg container-sm font-[mulish]">
+        <!-- main container for responsive start -->
+
+        <!-------------------------------------------------------  -->
+
+
+
+
+
+
+
+
+        <!-- ---------------------------------header---------------------------- -->
+
+
+        <div class="navbar bg-base-100 mb-7 mt-7">
+
+
+            <div class="navbar-start">
+                <h1 class="font-extrabold text-3xl">ReTro</h1>
+            </div>
+
+            <div class="navbar-end ">
+
+                <div class="dropdown lg:hidden">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h7" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        
+                        <li><button class="btn btn-circle" title="Home">
+                            <i class="fa-solid fa-house"></i>
+                        </button></li>
+                        <li><button class="btn btn-circle" title="Edit">
+                            <i class="fa-solid fa-pen"></i>
+                        </button></li>
+                        <li><button class="btn btn-circle" title="Add User">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </button></li>
+                        <li><button class="btn btn-circle" title="Flag">
+                            <i class="fa-solid fa-flag"></i>
+                        </button></li>
+                    </ul>
+                </div>
+                <!-- button container -->
+                <div class="mr-4 hidden sm:block">
+                    <button class="btn btn-circle" title="Home">
+                        <i class="fa-solid fa-house"></i>
+                    </button>
+                    
+                    <button class="btn btn-circle" title="Edit">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                    
+                    <button class="btn btn-circle" title="Add User">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </button>
+                    
+                    <button class="btn btn-circle" title="Flag">
+                        <i class="fa-solid fa-flag"></i>
+                    </button>
+                </div>
+                
+
+                <button class="btn rounded-r-3xl rounded-l-3xl bg-[#7A7DFC] text-white capitalize">sign in </button>
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+
+
+        <!-- ---------------------------------header---------------------------- -->
+
+        <!-- banner 1 -->
+        <div style="background-image: url(images/banner-img.png);background-repeat: no-repeat;background-size: cover;" class="bg-[#12132D]  rounded-2xl">
+            <div class="p-14">
+                <div class=" flex lg:flex-row flex-col justify-between items-center gap-2">
+                    <div class="">
+                        <h1 class="text-white text-5xl font-extrabold">
+                            welcome to the <br>
+                            <span class="text-transparent bg-gradient-to-l from-[#4975ed] via-[#4F7DFC] to-[#763cda] bg-clip-text">ReTro</span> Forum
+                        </h1> <br>
+
+                        <p class="p text-[#e2dfe6]">Share your favorite opinion and win and wp <br> forum coffee mug</p> <br>
+
+                        <label class="input input-bordered flex items-center gap-2">
+                            <input type="text" class="grow" placeholder="Search here anything" />
+                            <button class="btn rounded-3xl bg-blue-bg text-white  ">Search</button>
+                          </label>
+
+                    </div>
+
+                    <div class="bg-white p-5 rounded-lg">
+                        <table>
+                            <tr>
+                                <th>Registered Users</th>
+                                <td>01</td>
+                            </tr>
+                            <tr>
+                                <th>Forum</th>
+                                <td>05</td>
+                            </tr>
+                            <tr>
+                                <th>Topics</th>
+                                <td>01</td>
+                            </tr>
+                            <tr>
+                                <th>Replies</th>
+                                <td>01</td>
+                            </tr>
+                        </table>
+                    
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <!-- banner 1 ends -->
+
+
+
+        <!-- lets discuss -->
+        <div class="text-center mt-24 mb-8">
+            <h2 class="capitalize h2 text-h2-color">let's discuss</h2>
+            <p class="p">be a part of revolution.Become a part of our growing community by registering for an account.
+                <br> Dive into our diverse categories and find discussions that align with your interests.</p>
+        </div>
+        <!-- lets discuss ends -->
+
+
+
+
+        <!-- banner 2 starts -->
+        <div class="bg-[#12132D]  rounded-2xl">
+            <div class="p-14">
+                <div class=" flex lg:flex-row flex-col justify-between items-center gap-2">
+                    <div class="">
+                       <h1 class="h2 text-white"> Join Our Forum</h1>>
+
+                        <p class="p text-[#bab8bc]">"Don't just scroll, engage! Join our forum for a front-row  <br> seat to thought-provoking discussions and a community that values your input."</p> <br>
+
+                        <button class="btn btn-wide capitalize bg-btn-color text-white rounded-3xl">register now </button>
+
+                    </div>
+
+                    <div class="bg-transparent p-5 rounded-lg">
+                       <img src="images/joinforum.png" alt="">
+                    
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- banner 2 ends -->
+
+
+
+
+         <!-- lets discuss -->
+        <div class="text-center mt-24 mb-8">
+            <h2 class="capitalize h2 text-h2-color">Latest Posts</h2>
+            <p class="p">Missed our previous posts? Don't worry! Subscribe to our newsletter or <br>
+                 follow us for regular updates. Your journey into knowledge, connection, and discovery starts here.
+            </p>
+        </div>
+        <!-- lets discuss ends -->
+
+
+
+
+        <!-- main container for responsive ends -->
+    </div>
+
+    <footer>
+        
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
