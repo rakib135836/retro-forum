@@ -180,8 +180,9 @@
                         <br>
 
                         <label class="input input-bordered flex items-center gap-2">
-                            <input type="text" class="grow" placeholder="Search here anything" />
-                            <button class="btn rounded-3xl bg-blue-bg text-white  ">Search</button>
+                            <input id="search-field" type="text" class="grow" placeholder="Search here anything" />
+
+                            <button onclick="searchHandle()" class="btn rounded-3xl bg-blue-bg text-white  ">Search</button>
                         </label>
 
                     </div>
@@ -215,6 +216,9 @@
         <!-- banner 1 ends -->
 
 
+        
+
+
 
         <!-- lets discuss -->
         <div class="text-center mt-24 mb-8">
@@ -232,52 +236,16 @@
         <!-- allpost functional part -->
 
         <div class="flex flex-col lg:flex-row justify-between mb-8">
+
+
+
             <!-- post container -->
-            <div class="flex flex-row gap-2 p-8 bg-gray-200 rounded-2xl ">
-                <!-- avatar on the left -->
-                <div>
-                    <div class="avatar">
-                        <div class="w-24 rounded-xl relative">
-                            <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                            <div class="absolute top-0 right-0 w-5 h-5 bg-green-500 rounded-full border-2 border-white">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- post content on the right -->
-                <div class="flex flex-col">
-                    <!-- top -->
-                    <div class="flex flex-row gap-3">
-                        <div>
-                            <p class="p text-h-color">#Music</p>
-                        </div>
-                        <div>
-                            <p class="capitalize p text-h-color">author:anwar hossain</p>
-                        </div>
-                    </div>
-
-                    <h1 class="h4 text-h-color">10 Kids Unaware of Their Halloween Costume</h1> <br>
-                    <p class="p text-p-color">It’s one thing to subject yourself to a Halloween costume mishap because,
-                        <br>
-                        hey that’s your prerogative
-                    </p>
-                    <br>
-                    <hr>
-                    <br>
-
-                    <!-- bottom -->
-                    <div class="flex justify-between">
-                        <div>
-                            <span><i class="fa-regular fa-message"></i> 560</span>
-                            <span><i class="fa-solid fa-eye"></i> 13,568</span>
-                            <span><i class="fa-solid fa-clock"></i> 5 min</span>
-                        </div>
-
-                        <button class="btn rounded-full"><i class="fa-solid fa-envelope text-green-500"></i></button>
-                    </div>
-                </div>
+            <div id="post-container" class="flex flex-col gap-3">
+                
             </div>
+            <!-- post container -->
+
+
 
             <!-- post-container right -->
             <div class="card w-96 bg-gray-200 shadow-xl">
