@@ -1,5 +1,5 @@
 
-const loadPosts = async (searchText) => {
+const loadPosts = async (searchText='comedy') => {
     const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchText}`);
     const data = await res.json();
     const posts = data.posts;
@@ -62,14 +62,14 @@ const displayPosts = posts => {
                             <span><i class="fa-solid fa-clock"></i> ${post.posted_time}</span>
                         </div>
 
-                        <button onclick="showCount()"  class="btn rounded-full"><i class="fa-solid fa-envelope text-green-500"></i></button>
+                        <button onclick="showCount();showTitles('${post.title}');showViewers('${post.view_count}')"  class="btn rounded-full"><i class="fa-solid fa-envelope text-green-500"></i></button>
                     </div>
                 </div>
     `
     postContainer.appendChild(postCard);    
     });
 
-    
+    toggleLoadingSpinner(false);
 }
 
 
@@ -82,12 +82,36 @@ const showCount=()=>{
 }
 
 
-// const showTitles=async(id)=>{
-//     console.log('clicked',id);
-//     const res=await fetch(` https://openapi.programming-hero.com/api/retro-forum/latest-postshttps://openapi.programming-hero.com/api/retro-forum/posts?id=${id}`)
-//     const data=await res.json()
-//     console.log(data.title);
-// }
+const showTitles=async(id)=>{
+    console.log('clicked',id);
+    // const res=await fetch(` https://openapi.programming-hero.com/api/retro-forum/latest-postshttps://openapi.programming-hero.com/api/retro-forum/posts`)
+    // const data=await res.json()
+    // const post =data.data;
+    // console.log(post);
+
+    
+    const titleContainer=document.getElementById('title-container');
+    const titleDiv=document.createElement('div');
+    titleDiv.classList=`flex justify-between bg-base-100 p-2 rounded-2xl`
+    titleDiv.innerHTML=`
+    
+    <p id="title-display" class="h4">${id}</p>
+    
+
+    `
+    titleContainer.appendChild(titleDiv);
+
+    // displayTitles();
+}
+const showViewers=(view)=>{
+    console.log(view);
+    const viewC=document.getElementById('title-container');
+    const viewNumber=document.createElement('span')
+    viewNumber.innerHTML=`<i  class="fa-solid fa-eye"></i>${view}`
+    viewC.appendChild(viewNumber);
+}
+
+
 
 
 // search handle
@@ -100,9 +124,9 @@ function searchHandle() {
     loadPosts(searchText);
 }
 
-setTimeout(() => {
-    toggleLoadingSpinner(false);
-}, 2000);
+// setTimeout(() => {
+    
+// }, 2000);
 
 
 const toggleLoadingSpinner=(isLoading)=>{
@@ -116,10 +140,6 @@ const toggleLoadingSpinner=(isLoading)=>{
 }
 
 
+loadPosts();
 
-// const setTimeout=setTimeout(()=>{
-//     hideToggleLoadingSpinner();
-// },2000);
-
-// loadPosts();
 
