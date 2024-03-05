@@ -17,7 +17,7 @@ const displayPosts2 = posts2 => {
         const displayDesignation= designation?designation:'unknown';
 
         const date=post2.author.posted_date;
-        const displayDate=date?date:'no post date';
+        const displayDate=date?date:'no publish date';
 
         const postCard2 = document.createElement('div');
         postCard2.classList = `card  bg-base-100 shadow-xl`;

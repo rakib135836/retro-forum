@@ -84,10 +84,7 @@ const showCount=()=>{
 
 const showTitles=async(id)=>{
     console.log('clicked',id);
-    // const res=await fetch(` https://openapi.programming-hero.com/api/retro-forum/latest-postshttps://openapi.programming-hero.com/api/retro-forum/posts`)
-    // const data=await res.json()
-    // const post =data.data;
-    // console.log(post);
+   
 
     
     const titleContainer=document.getElementById('title-container');
@@ -124,16 +121,19 @@ function searchHandle() {
     loadPosts(searchText);
 }
 
-// setTimeout(() => {
-    
-// }, 2000);
+
 
 
 const toggleLoadingSpinner=(isLoading)=>{
     const loadingSpinner=document.getElementById('loading-spinner');
     if(isLoading){
         loadingSpinner.classList.remove('hidden');
+
+        setTimeout(() => {
+            loadingSpinner.classList.add('hidden');
+        }, 2000);
     }
+    
     else{
         loadingSpinner.classList.add('hidden');
     }
