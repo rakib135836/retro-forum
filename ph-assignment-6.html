@@ -216,7 +216,7 @@
         <!-- banner 1 ends -->
 
 
-        
+
 
 
 
@@ -231,7 +231,9 @@
 
 
 
-
+       <div class="flex justify-center">
+        <span id="loading-spinner" class="loading loading-spinner loading-md hidden "></span>
+       </div>
 
         <!-- allpost functional part -->
 
@@ -259,13 +261,13 @@
                                 <p class="p ">Mark as read</p>
                             </span>
                             <span>
-                                <p>(0)</p>
+                                <p id="count-display">(0)</p>
                             </span>
                         </div>
                     </div>
 
                     <div class="flex justify-between bg-base-100 p-2 rounded-2xl">
-                        <p class="h4">10 Kids Unaware of Their Halloween Costume</p>
+                        <p id="title-display" class="h4">10 Kids Unaware of Their Halloween Costume</p>
                         <span><i class="fa-solid fa-eye"></i> 13,568</span>
                     </div>
 
@@ -327,34 +329,8 @@
 
         
 
-        <div class="card  bg-base-100 shadow-xl ">
-            <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-            <div class="card-body">
-
-                <div class="flex flex-row gap-3">
-                    <i class="fa-solid fa-calendar"></i>
-                    <p>date</p>
-                </div>
-                
-                <h2 class="card-title">
-                    What will a mars habitat force that impact in our daily life!!! 
+        <div id="latest-post-container" class="flex flex-col lg:flex-row gap-3">
             
-                </h2>
-              <p class="p text-p-color"> Yes, you can run unit tests and view the results directly within the app.</p>
-              <div class="card-actions justify-start">
-                <div>
-                    <div class="avatar">
-                        <div class="w-24 rounded-full">
-                          <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                        </div>
-                    </div>
-                </div> 
-                <div>
-                    <h1 class="text-h-color">Cameron Williamson</h1>
-                    <p class="p text-p-color">unknown</p>
-                </div>
-              </div>
-            </div>
         </div>
 
 
@@ -398,6 +374,7 @@
 
 
     <script src="script.js"></script>
+    <script src="latest-post.js"></script>
 </body>
 
 </html>
